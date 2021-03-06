@@ -1,7 +1,9 @@
+const mongoose = require('mongoose');
 const linker = require('./linker');
 
 let baseUrl;
 let baseUrlLen;
+let dbConnection;
 
 module.exports = {
     handleVisitor: (req, res) => {
@@ -18,5 +20,7 @@ module.exports = {
     config: (data) => {
         baseUrl = data.baseUrl;
         baseUrlLen = baseUrl.length;
+        console.log(data.connectionString);
+        dbConnection = mongoose.connect(data.connectionString);
     }
 }

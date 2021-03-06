@@ -8,10 +8,13 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 
-const baseurl = process.env.BASE_URL;
+const baseUrl = process.env.BASE_URL;
+
+const connectionString = `mongodb://${process.env.MONGO_INITDB_USERNAME}:${process.env.MONGO_INITDB_PASSWORD}@127.0.0.1:27017/${process.env.MONGO_INITDB_DATABASE}`;
 
 theSmarts.config({
-    baseUrl: baseurl
+    baseUrl,
+    connectionString,
 });
 
 app.get('/link/:link', theSmarts.handleVisitor);
