@@ -1,0 +1,24 @@
+{
+  "name": "url-lengthener",
+  "version": "1.0.0",
+  "description": "A very pointless but fun URL-lengthener",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js",
+    "serve": "nodemon server.js"
+  },
+  "author": "Tobias Christiansen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "prettier": "2.2.1"
+  }
+}
