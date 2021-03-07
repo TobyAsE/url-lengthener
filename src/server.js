@@ -24,7 +24,12 @@ db.on('error', console.error.bind(console, 'Mongoose connection error: '));
 app.get('/link/:link', theSmarts.handleVisitor);
 app.post('/create', theSmarts.handleCreation);
 
-app.use(express.static('public'));
+app.use(express.static('public', {
+    index: false, 
+    immutable: true, 
+    cacheControl: true,
+    maxAge: "30d",
+}));
 
 nunjucks.configure('src/views',{
     express: app,

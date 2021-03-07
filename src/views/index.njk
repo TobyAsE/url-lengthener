@@ -1,4 +1,11 @@
 {% extends "parts/mainTemplate.njk" %}
 {% block mainContent %}
-Hello!
+<p>These days <a href="https://github.com/738/awesome-url-shortener" target="_blank">everybody and their aunt</a>'s got a URL-Shortener, so there's not much value in creating one yourself.</p>
+<p>But thinking about this topic: Has there ever been the reverse, a URL-lengthener? I don't think so and here it is, the worlds first URL-lengthener!</p>
+<div id="app" class="d-flex flex-column">
+<input type="url" name="url" id="url" />
+<button id="lengthen" class="btn btn-primary">Make it longer!</button>
+<div id="output"></div>
+</div>
+<p><a href="https://technomanor.wordpress.com/2012/04/03/maximum-url-size/" target="_blank">Apparently</a> the longest an URL can be is 2048 characters to still be compatible with all browsers.</p>
 {% endblock %}

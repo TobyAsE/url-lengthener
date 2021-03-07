@@ -9,8 +9,8 @@ module.exports = {
         const shortLinkOrErr = await linker.resolve(longLink);
         
         console.log("Resolved '%s'", shortLinkOrErr.shortLink);
-        res.status(200).send(shortLinkOrErr.shortLink);
-        // res.redirect(shortLinkOrErr.shortLink);
+        // res.status(200).send(shortLinkOrErr.shortLink);
+        res.redirect(shortLinkOrErr.shortLink);
 
         shortLinkOrErr.visitorCount += 1;
         shortLinkOrErr.save();

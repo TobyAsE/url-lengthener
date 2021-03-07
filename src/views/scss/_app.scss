@@ -1,0 +1,22 @@
+#app {
+    #url {
+        border-radius: 0;
+        background-color: #fff;
+        border: 2px solid navy;
+        padding: 5px;
+        font-size: 110%;
+        width: 100%;
+
+        &:focus, &:active, &:hover, &:focus-visible, &:focus-within {
+            border: 2px solid lighten(navy, 20%);
+        }
+
+        margin: 20px 0;
+    }
+    #output {
+        word-wrap: break-word;
+        padding: 10px;
+        margin: 10px 0;
+        height: auto;
+    }
+}
