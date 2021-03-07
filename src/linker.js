@@ -22,8 +22,7 @@ module.exports = {
     resolve: async (longLink) => {
         // TODO: Errors?
         const theOne = await Link.findOne({longLink}).exec();
-        console.log(theOne);
-
+        
         return theOne;
     },
     config: (data) => {
