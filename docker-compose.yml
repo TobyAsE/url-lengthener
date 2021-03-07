@@ -5,6 +5,8 @@ services:
   db:
     image: mongo
     restart: on-failure
+    ports:
+      - 27017:27017 # REMOVE this in a production environment!
 
   app:
     build: .
