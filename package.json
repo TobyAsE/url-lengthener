@@ -11,7 +11,9 @@
     "lint": "eslint ./src --ext .js",
     "watch:server": "nodemon src/server.js --exec 'npm run lint && node'",
     "watch:sass": "chokidar 'src/views/scss/**/*.scss' -c 'npm run sass:build'",
-    "serve": "npm-run-all -p watch:*"
+    "serve": "npm-run-all -p watch:*",
+    "build": "npm run sass:build",
+    "start": "node src/server.js"
   },
   "author": "Tobias Christiansen",
   "license": "ISC",

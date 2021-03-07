@@ -15,7 +15,7 @@ theSmarts.init({
     baseUrl,
 });
 
-const connectionString = `mongodb://127.0.0.1:27017/urllengthener`;
+const connectionString = `mongodb://${process.env.DB_HOST}:27017/urllengthener`;
 mongoose.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Mongoose connection error: '));
